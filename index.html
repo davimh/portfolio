@@ -1,10 +1,562 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Olá mundão</title>
+	<title>github.com/davimh/portfolio</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+	<meta charset="UTF-8">
 </head>
 <body>
-	<h1>Olá mundão</h1>
-	<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/Untitled-1.gif">
+	<!-- Menu -->
+	<aside class="hidden" id="menu">
+		<!-- quando a classe hidden estiver aplicada, apenas os icones de menu e back to top estarao visiveis -->
+		<!-- quando a classe display estiver aplicada, o conteudo do menu é mostrado -->
+
+		<!-- no clique do icone de menu, trocar a classe de hidden para display -->
+		<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/menuIcon.svg" id="menuIcon" alt="svg hamburger menu" onclick="swapMenuClass()">
+		
+		<!-- no clique do icone de fechar menu, trocar a classe de display para hidden -->
+		<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/closeIcon.svg" id="closeIcon" alt="svg fechar menu" onclick="swapMenuClass()">
+
+		<!-- cada projeto possui uma das 13 cores da paleta; essa cor será o fundo do número da lista -->
+		<!-- cada item da lista ativa uma ancora na pagina relativa ao projeto do item -->
+		<!-- o clique em qualquer um dos itens alterna a classe do menu para hidden -->
+		<div>
+			<ul>
+				<li data-bgcolor="01" onClick="toSection('hortela')">
+					<span class="number">1</span> Hortelã
+				</li>
+				<li data-bgcolor="02" onClick="toSection('redig')">
+					<span class="number">2</span> Sete virtudes capitais do design
+				</li>
+				<li data-bgcolor="03" onClick="toSection('calendario')">
+					<span class="number">3</span> Calendário 2018
+				</li>
+				<li data-bgcolor="04" onClick="toSection('ciclo')">
+					<span class="number">4</span> Ciclopassarela
+				</li>
+				<li data-bgcolor="05" onClick="toSection('pap')">
+					<span class="number">5</span> Série Produção Acadêmica Premiada
+				</li>
+				<li data-bgcolor="06" onClick="toSection('ift')">
+					<span class="number">6</span> IFT
+				</li>
+				<li data-bgcolor="07" onClick="toSection('sinalizacaofau')">
+					<span class="number">7</span> Sinalização interna FAUUSP
+				</li>
+				<li data-bgcolor="08" onClick="toSection('32mcb')">
+					<span class="number">8</span> 32º Prêmio Cartaz MCB
+				</li>
+				<li data-bgcolor="09" onClick="toSection('participe')">
+					<span class="number">9</span> Participe
+				</li>
+				<li data-bgcolor="10" onClick="toSection('cantareira')">
+					<span class="number">10</span> Parque da Cantareira
+				</li>
+				<li data-bgcolor="11" onClick="toSection('idvusp')">
+					<span class="number">11</span> Identidade visual USP
+				</li>
+				<li data-bgcolor="12" onClick="toSection('outorgas')">
+					<span class="number">12</span> Cadastro de Outorgas
+				</li>
+				<li data-bgcolor="13" onClick="toSection('monitoramento')">
+					<span class="number">13</span> Monitoramento dos PIUs
+				</li>
+				<li onClick="toSection('curriculo')">Currículo</li>
+			</ul>
+
+			<p>hosogiri.davi@gmail.com</p>
+			<p>+55 11 971 028 280</p>
+		</div>
+
+		<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/topIcon.svg" id="topIcon" alt="svg back to top" onclick="toTop()">
+	</aside>
+
+	<!-- Conteudo -->
+	<main>
+
+		<img id="cover" src="https://raw.githubusercontent.com/davimh/portfolio/master/images/cover.webp" alt="imagem randomica"></img>
+
+		<section class="intro">
+			<h1>Olá</h1>
+			<br><br>
+			<p>Meu nome é Davi e eu sou um designer de São Paulo (BR). Estes são alguns dos projetos em que trabalhei:</p>
+		</section>
+
+		<section class="proj" id="hortela">
+			<h2>
+				<p class="number" data-bgcolor="01">1</p>
+				Hortelã
+			</h2>
+			<div class="images">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/hortela/1.png" alt="Página dupla com artigo">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/hortela/2.png" alt="Capa-envelope">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/hortela/3.png" alt="Montagem da sementeira">
+			</div>
+			<div class="info">
+				<p>Tendo como mote principal a agricultura urbana e as questões que a permeiam, a revista Hortelã foi resultado do projeto proposto durante a disciplina de Programação Visual IV no âmbito do curso de Design na FAUUSP. Ela foi pensada na abrangência de temas correlatos ao assunto principal, como cultivo de hortas urbanas, políticas públicas para agricultura urbana e produção de alimentos para as grandes cidades. Com a temática atravessando os processos de produção gráfica, a impressão seria feita em papel reciclado leve com tinta orgânica. Tanto o tratamento das imagens em retícula linear quanto a escolha das tipografias (especialmente a <a href="http://rymaneco.co.uk/">Ryman Eco</a>) reduzem a quantidade de tinta empregada na produção. O <i>layout</i> da revista a auxilia a cumprir um papel educativo: cada edição é composta por oito páginas (quatro simples e duas duplas) impressas num lado de duas folhas 1/2 B (660 x 480mm) somados à dois cartazes impressos no verso de cada uma das folhas para serem fixados numa parede. O conjunto da capa e contracapa é formatado num envelope em <i>kraft</i> que possui vincos específicos para permitir que seja dobrado e transformado numa sementeira.</p>
+				<aside>
+					<h3>2015</h3>
+					<h3>Equipe de projeto</h3>
+					<p>Caio Vital, Mayara Fujitani e Pedro Otavio Cardamone</p>
+					<ul class="tags">
+						<li>Produção gráfica</li>
+						<li>Editorial</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section class="proj" id="redig">
+			<h2>
+				<p class="number" data-bgcolor="02">2</p>
+				Sete virtudes capitais do design
+			</h2>
+			<div class="images">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/redig/1.png" alt="Cartaz">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/redig/2.png" alt="Detalhe">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/redig/3.png" alt="Detalhe">
+			</div>
+			<div class="info">
+				<p>Projeto realizado para a divulgação da aula inaugural do curso de Design da FAUUSP de 2015, ministrada pelo Prof. Joaquim Redig (PUC-Rio), figura fundamental para o design gráfico carioca e brasileiro e ex-sócio de Aloísio Magalhães. Na aula, o professor realizou uma contraposição dos sete pecados capitais com sete devires da atuação profissional de design, marcando a importância do projeto para a realização de outras sociedades possíveis. A produção do cartaz procurou evidenciar a presença do professor na faculdade e se deu num contexto de colaboração ímpar entre os corpos discente e docente da instituição.</p>
+				<aside>
+					<h3>2015</h3>
+					<h3>Acompanhamento</h3>
+					<p>Profa. Clice Mazzilli, Profa. Giselle Beiguelman, Prof. Marcos da Costa Braga, Profa. Priscila Farias</p>
+					<h3><a href="https://github.com/davimh/portfolio/raw/master/files/AulaMagna2015.pdf">Cartaz</a></h3>
+					<h3><a href="https://www.youtube.com/watch?v=3sbIF9ZdGOo">Gravação da aula</a></h3>
+					<ul class="tags">
+						<li>Produção gráfica</li>
+						<li>Cartaz</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section class="proj" id="calendario">
+			<h2>
+				<p class="number" data-bgcolor="03">3</p>
+				Calendário 2018
+			</h2>
+			<div class="images">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/calendario/1.png" alt="Calendário">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/calendario/2.png" alt="Detalhe">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/calendario/3.png" alt="Detalhe">
+			</div>
+			<div class="info">
+				<p>Projeto pessoal de aprimoramento realizado em parceria com a designer Joyce Kiesel, buscando a simplicidade em novas formas de marcar graficamente a passagem do tempo e o acontecimento dos eventos durante um ano, como as fases da lua e a regência astrológica do sol em cada período, a partir da limitação da paleta de cores em preto e branco.</p>
+				<aside>
+					<h3>2018</h3>
+					<h3>Equipe de projeto</h3>
+					<p>Joyce Kiesel</p>
+					<ul class="tags">
+						<li>Produção gráfica</li>
+						<li>Experimental</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section class="proj" id="ciclo">
+			<h2>
+				<p class="number" data-bgcolor="04">4</p>
+				Ciclopassarela
+			</h2>
+			<div class="images">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/ciclo/1.png" alt="Vista frontal do modelo principal de sinalizador">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/ciclo/2.png" alt="Malha de construção do modelo principal de sinalizador">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/ciclo/3.png" alt="Esquema estrutural de outro elemento da família">
+			</div>
+			<div class="info">
+				<p>Realizado no âmbito do estágio no Núcleo de Pesquisa em Tecnologia da Arquitetura e Urbanismo da USP (NUTAU-USP), este projeto de sinalização integrou a proposta do Núcleo para um concurso público voltado para o desenvolvimento de uma passarela que conectaria o Parque Villa-Lobos com a Praça do Relógio da USP, atravessando o rio Pinheiros e fechado para automóveis.</p>
+				<aside>
+					<h3>2014</h3>
+					<ul class="tags">
+						<li>Sinalização urbana</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section class="proj" id="pap">
+			<h2>
+				<p class="number" data-bgcolor="05">5</p>
+				Série Produção Acadêmica Premiada
+			</h2>
+			<div class="images">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/pap/1.png" alt="Páginas da tese de André Henrique Bezerra dos Santos">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/pap/2.png" alt="Detalhe de página">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/pap/3.png" alt="Detalhe de página">
+			</div>
+			<div class="info">
+				<p>Aplicação e desenvolvimento do projeto gráfico para a série Produção Acadêmica Premiada da FFLCH-USP no contexto do estágio na editora Humanitas da mesma Faculdade. A série publica eletronicamente os trabalhos de maior destaque dos programas de pós-graduação da instituição. As alterações no <i>layout</i> inicial das publicações se deram no sentido de flexibilizar o uso de imagens e outros componentes não textuais a fim de otimizar o entendimento com estes conteúdos de apoio e também para viabilizar suporte para diagramação em línguas como grego e sânscrito.</p>
+				<aside>
+					<h3>2016</h3>
+					<h3><a href="http://spap.fflch.usp.br/sites/spap.fflch.usp.br/files/PAP-SANTOS_Andre-17022016-PRONTO.pdf">Exemplo de publicação da série</a></h3>
+					<ul class="tags">
+						<li>Editorial</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section class="proj" id="ift">
+			<h2>
+				<p class="number" data-bgcolor="06">6</p>
+				IFT
+			</h2>
+			<div class="images">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/ift/1.png" alt="Versão principal">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/ift/2.png" alt="Versão completa com malha de construção e área de segurança">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/ift/3.png" alt="Versão principal negativa">
+			</div>
+			<div class="info">
+				<p>Projeto apresentado para o concurso do logotipo do Instituto de Física Teórica da UNESP. O formato das letras como num <i>display</i> analógico se baseou em duas etapas fundamentais do método racional, a observação e o registro de fenômenos, enquanto a relativa dificuldade em se entender quais letras são essas corresponde ao processo de decodificação de um dado, e o emprego das linhas horizontais à ideia de conexão ou encadeamento. O desenho foi pautado numa estrutura quadricular, que serve como suporte tanto para a aplicação da marca como para a delimitação da sua área de segurança.</p>
+				<aside>
+					<h3>2018</h3>
+					<h3><a href="https://github.com/davimh/portfolio/raw/master/files/Pranchas_IFT.pdf">Pranchas de apresentação do logotipo</a></h3>
+					<ul class="tags">
+						<li>Logotipo</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section class="proj" id="sinalizacaofau">
+			<h2>
+				<p class="number" data-bgcolor="07">7</p>
+				Sinalização interna FAUUSP
+			</h2>
+			<div class="images">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/sinalizacaofau/1.png" alt="Aplicação do projeto na região das escadas">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/sinalizacaofau/2.png" alt="Desenho da implantação do projeto ao lado do elevador">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/sinalizacaofau/3.png" alt="Render do projeto ao lado do elevador">
+			</div>
+			<div class="info">
+				<p>Neste projeto realizado para o concurso de ideias para a sinalização interna dos edifícios da FAUUSP, tomou-se como princípio a necessidade da relação entre a linguagem arquitetônica do espaço e a dos elementos que compusessem o projeto de sinalização. Dessa forma, estruturas simples e robustas foram empregadas de maneira que ficassem aparentes. Por outro lado, procurou-se somar à composição plástica do edificío principal (Vilanova Artigas) de modo que as intervenções não competissem com a estrutura deste, o que acabou configurando o ponto mais delicado de reflexão do projeto de sinalização: a procura pelo equilíbrio entre intervenção visual mínima e atenção visual necessária para que sua função fosse cumprida. A família tipográfica empregada no projeto, Interstate, de Tobias Frere-Jones, foi escolhida por ter seu desenho pensado para permitir leituras à longas distâncias e em movimento, como, muitas vezes, se dá a observação do edifício principal.</p>
+				<aside>
+					<h3>2017</h3>
+					<h3>Equipe de projeto</h3>
+					<p>Caio Vital, Fernando Cescon, João Schmitt</p>
+					<ul class="tags">
+						<li>Sinalização</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section class="proj" id="32mcb">
+			<h2>
+				<p class="number" data-bgcolor="08">8</p>
+				32º Prêmio Cartaz MCB
+			</h2>
+			<div class="images">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/32mcb/1.png" alt="Cartaz">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/32mcb/2.png" alt="Detalhe">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/32mcb/3.png" alt="Detalhe">
+			</div>
+			<div class="info">
+				<p>Realizado anualmente, o Concurso do Cartaz para o Prêmio Design do Museu da Casa Brasileira procurar incentivar a reflexão sobre o design brasileiro e reforçar o uso cultural do cartaz como meio de expressão. Dessa forma se deu a utilização de vistas frontais de produtos que evidenciam a cultura doméstica brasileira numa malha de células quadradas, procurando alinhar seus valores simbólicos com uma linguagem técnica própria do desenho de produtos.</p>
+				<aside>
+					<h3>2018</h3>
+					<h3>Selecionado para a mostra de cartazes do concurso de 2018</h3>
+					<h3><a href="https://raw.githubusercontent.com/davimh/portfolio/master/files/32MCB.jpg">Cartaz</a></h3>
+					<ul class="tags">
+						<li>Cartaz</li>
+						<li>Ilustração</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section class="proj" id="participe">
+			<h2>
+				<p class="number" data-bgcolor="09">9</p>
+				Participe
+			</h2>
+			<div class="images">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/participe/1.png" alt="Páginas de consulta e landing page da plataforma">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/participe/2.png" alt="Detalhe de componente de exploração de camadas de um mapa">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/participe/3.png" alt="Detalhe de legenda de mapa feito em CSS">
+			</div>
+			<div class="info">
+				<p>O <a href="https://participe.gestaourbana.prefeitura.sp.gov.br/">Participe</a> é uma plataforma que surgiu da demanda de centralizar as consultas públicas virtuais dos projetos urbanos desenvolvidos da São Paulo Urbanismo, empresa pública vinculada à Secretaria Municipal de Desenvolvimento Urbano da cidade. Este projeto é relativo tanto à experiência de uso da plataforma em si quanto às consultas propriamente ditas. A partir da análise dos formatos de conteúdo delas foram pensados seus estilos, que foram documentados na <a href="https://github.com/SPURB/participe/wiki">wiki do GitHub do Participe</a>. Inclusive, através do <a href="https://github.com/SPURB/participe">GitHub</a> o código é distribuído e aberto à modificação. Com exceção do próprio texto da consulta, o restante dos dados que alimentam cada uma das páginas são transmitidos através da <a href="https://documenter.getpostman.com/view/4136141/S1ZxbpLD?version=latest#8db2234b-bbab-4d1f-a7bf-6775a236325a">API das Consultas Públicas</a>. Três sistemas de contribuições nas consultas foram desenvolvidos com o intuito de facilitar esse processo e conseguir captar a maior quantidade de posições dos cidadãos. Alguns componentes específicos também foram pensados para melhor transmitir graficamente as ideias contidas no texto das consultas, a partir da demanda da equipe de arquitetura e urbanismo e da sua colaboração com a de design. Desde que foi implantado, a ampliação do número de contribuições ofereceu mais bases para a continuidade do desenvolvimento dos projetos e planos que são objetos das consultas.</p>
+				<aside>
+					<h3>2018</h3>
+					<h3>Equipe de projeto</h3>
+					<p>Hécio Lucas Santos, Horrana Porfírio Soares, Flávia Lopes, Renan Moreira Gomes, Thomas Len Yuba</p>
+					<h3><a href="https://participe.gestaourbana.prefeitura.sp.gov.br/">Link para o Participe</a></h3>
+					<h3><a href="https://documenter.getpostman.com/view/4136141/S1ZxbpLD?version=latest#8db2234b-bbab-4d1f-a7bf-6775a236325a">Link para a documentação da API das Consultas Públicas</a></h3>
+					<h3>A API das Consultas Públicas <a href="https://www.iabsp.org.br/?concursos=vencedores-da-premiacao-iabsp-2019">foi vencedora da premiação anual do IAB/SP de 2019</a> na categoria "Plataformas e Suportes Tecnológicos".</h3>
+					<ul class="tags">
+						<li>Interface de usuário</li>
+						<li>Front-end</li>
+						<li>Documentação de API</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section class="proj" id="cantareira">
+			<h2>
+				<p class="number" data-bgcolor="10">10</p>
+				Parque da Cantareira
+			</h2>
+			<div class="images">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/cantareira/1.png" alt="Detalhe de peça do conjunto com indicações de índices pluviométricos, foto de satélite e fotografia de taturana nativa">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/cantareira/2.png" alt="Detalhe de peça do conjunto com mapa topográfico do entorno e fotografias diversas">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/cantareira/3.png" alt="Detalhe de peça do conjunto com destaque em joaninha nativa">
+			</div>
+			<div class="info">
+				<p>Projeto pessoal realizado com o intuito de transcodificar a experiência de uma visita ao Parque Estadual da Cantareira numa linguagem gráfica próxima ao universo da ciência, feito a partir de fotografias e observações e através da adição de dados coletados posteriormente.</p>
+				<aside>
+					<h3>2017</h3>
+					<ul class="tags">
+						<li>Fotografia</li>
+						<li>Experimental</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section class="proj" id="idvusp">
+			<h2>
+				<p class="number" data-bgcolor="11">11</p>
+				Identidade visual USP
+			</h2>
+			<div class="images">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/idvusp/1.png" alt="Logotipo">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/idvusp/2.png" alt="Aplicação da identidade visual em cartaz para evento no Instituto de Estudos Avançados">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/idvusp/3.png" alt="Aplicação da identidade visual em papelaria">
+			</div>
+			<div class="info">
+				<p>Projeto realizado para a disciplina de Programação Visual II do curso de Design da FAUUSP, no qual foi proposto o desenvolvimento de uma nova identidade visual para a Universidade. O emprego de diferentes estilos da família tipográfica se relaciona à diversidade necessária para a produção do conhecimento científico e o símbolo de pontuação dois-pontos materializa as ideias de contextualização, explicação e reflexão, abstrações do papel social da universidade pública. A aplicação do sistema de identidade se baseou neste símbolo e gerou diretrizes como a justaposição de planos e adoção de paletas de duas cores (variáveis) em seus produtos.</p>
+				<aside>
+					<h3>2014</h3>
+					<h3>Equipe de projeto</h3>
+					<p>Beatriz Rizental, Víctor Ivanon</p>
+					<ul class="tags">
+						<li>Identidade visual</li>
+						<li>Papelaria</li>
+						<li>Cartaz</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section class="proj" id="outorgas">
+			<h2>
+				<p class="number" data-bgcolor="12">12</p>
+				Cadastro de Outorgas
+			</h2>
+			<div class="images">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/outorgas/1.png" alt="Telas do sistema de cadastro das outorgas">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/outorgas/2.png" alt="Detalhe da documentação da API das Outorgas">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/outorgas/3.png" alt="Tabela de processos de incorporação de outorga nos relatórios gerados pela API">
+			</div>
+			<div class="info">
+				<p>Sistema criado para a inserção de novos processos de incorporação de outorgas onerosas no âmbito das Operações Urbanas do município de São Paulo, pensado para simplificar os trâmites burocráticos necessários e para reduzir a chance de erros ou divergências entre os processos, a fim de conferir mais coerência entre eles e transmitir mais credibilidade aos encarregados (neste caso, a São Paulo Urbanismo). A interface foi desenhada de modo a facilitar o preenchimento de dados de forma simples e intuitiva para o usuário. Os dados inseridos alimentam a API das Outorgas, cuja documentação se encontra <a href="https://spurb.github.io/outorga-backend/">aqui</a>, que, por sua vez, transmite os dados para a geração de <a href="https://spurb.github.io/relatorios/">relatórios</a> de acompanhamento.</p>
+				<aside>
+					<h3>2019</h3>
+					<h3>Equipe de projeto</h3>
+					<p>Hécio Lucas Santos, Thomas Len Yuba</p>
+					<h3><a href="https://spurb.github.io/outorga-backend/">Link para a documentação da API das Outorgas</a></h3>
+					<h3><a href="https://spurb.github.io/relatorios/">Link para os relatórios da empresa</a></h3>
+					<ul class="tags">
+						<li>Interface de usuário</li>
+						<li>Front-end</li>
+						<li>Documentação de API</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section class="proj" id="monitoramento">
+			<h2>
+				<p class="number" data-bgcolor="13">13</p>
+				Monitoramento dos PIUs
+			</h2>
+			<div class="images">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/monitoramento/1.png" alt="Telas de monitoramento do PIU Pacaembu">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/monitoramento/2.png" alt="Detalhe da tela inicial do sistema">
+				<img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/monitoramento/3.png" alt="Detalhe da tela de monitoramento do PIU Setor Central">
+			</div>
+			<div class="info">
+				<p>Sistema de acompanhamento dos Projetos de Intervenção Urbana previstos no Plano Diretor Estratégico do município de São Paulo de 2014, contendo informações técnicas relevantes para pesquisadores e profissionais da área de planejamento urbano e para ampliar a transparência sobre estes projetos. A centralização dessas informações e a observação da importância da divulgação de dados públicos configuraram a demanda para este projeto, que partiu de uma tabela extensa que os continham, porém cuja consulta era trabalhosa e não intuitiva. Os dados que alimentam o sistema são transmitidos através da <a href="https://documenter.getpostman.com/view/4136141/S1ZxbpLD?version=latest#1cd76587-99aa-450b-8590-1eb6882dafff">API de Monitoramento dos PIUs</a>.</p>
+				<aside>
+					<h3>2018</h3>
+					<h3>Equipe de projeto</h3>
+					<p>Hécio Lucas Santos, Joyce Reis Pereira da Silva, Gabriel Vasquez Rodriguez, Thomas Len Yuba</p>
+					<h3><a href="https://gestaourbana.prefeitura.sp.gov.br/estruturacao-territorial/piu/piu-monitoramento/">Link para o sistema de Monitoramento dos PIUs</a></h3>
+					<ul class="tags">
+						<li>Interface de usuário</li>
+						<li>Front-end</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section id="curriculo">
+			<div>
+				<h2>Currículo</h2>
+				<table>
+					<tr>
+						<td colspan="2">Formação Acadêmica</td>
+					</tr>
+					<tr>
+						<td>2013–atual</td>
+						<td>
+							<h4>Graduação em Design</h4>
+							Faculdade de Arquitetura e Urbanismo da Universidade de São Paulo (FAU/USP) - São Paulo/SP
+						</td>
+					</tr>
+					<tr>
+						<td>2011–2012</td>
+						<td>
+							<h4>Curso Técnico em Informática para Internet</h4>
+							Escola Técnica Rubens de Faria e Souza (ETEC Rubens de Faria) - Sorocaba/SP
+						</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td colspan="2">Experiência profissional</td>
+					</tr>
+					<tr>
+						<td>2018–2019</td>
+						<td>
+							<h4>Estágio em Design e Desenvolvimento Web</h4>
+							São Paulo Urbanismo
+						</td>
+					</tr>
+					<tr>
+						<td>2015–2016</td>
+						<td>
+							<h4>Estágio em Diagramação</h4>
+							Editora Humanitas, da Faculdade de Filosofia, Letras e Ciências Humanas da Universidade de São Paulo (FFLCH/USP) - São Paulo/SP
+						</td>
+					</tr>
+					<tr>
+						<td>2014–2015</td>
+						<td>
+							<h4>Estágio em Comunicação Visual</h4>
+							Núcleo de Pesquisa da Tecnologia da Arquitetura e Urbanismo da Universidade de São Paulo (NUTAU-USP) - São Paulo/SP
+						</td>
+					</tr>
+					<tr>
+						<td>2013–2014</td>
+						<td>
+							<h4>Estágio em Webdesign</h4>
+							Webfau (Setor de Informática da Faculdade de Arquitetura e Urbanismo da Universidade de São Paulo, FAU/USP) - São Paulo/SP
+						</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td colspan="2">Competências</td>
+					</tr>
+					<tr>
+						<td>Português (leitura/fala)</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/5.svg"></td>
+					</tr>
+					<tr>
+						<td>Inglês (leitura/fala)</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/5.svg"></td>
+					</tr>
+					<tr>
+						<td>Espanhol (leitura/fala)</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/2.svg"></td>
+					</tr>
+					<tr>
+						<td>Adobe Photoshop</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/5.svg"></td>
+					</tr>
+					<tr>
+						<td>Adobe Illustrator</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/5.svg"></td>
+					</tr>
+					<tr>
+						<td>Adobe InDesign</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/5.svg"></td>
+					</tr>
+					<tr>
+						<td>Adobe Premiere Pro</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/2.svg"></td>
+					</tr>
+					<tr>
+						<td>Pacote Office</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/4.svg"></td>
+					</tr>
+					<tr>
+						<td>Windows</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/5.svg"></td>
+					</tr>
+					<tr>
+						<td>HTML</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/5.svg"></td>
+					</tr>
+					<tr>
+						<td>CSS</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/5.svg"></td>
+					</tr>
+					<tr>
+						<td>Javascript</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/4.svg"></td>
+					</tr>
+					<tr>
+						<td>Vue.JS</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/4.svg"></td>
+					</tr>
+					<tr>
+						<td>Wordpress</td>
+						<td><img src="https://raw.githubusercontent.com/davimh/portfolio/master/images/competencias/3.svg"></td>
+					</tr>
+				</table>
+			</div>
+		</section>
+
+		<section class="contato">
+			<p>hosogiri.davi@gmail.com</p>
+			<p>+55 11 971 028 280</p>
+		</section>
+	</main>
+
+	<script type="text/javascript">
+		const menu = document.getElementById('menu');
+		const menuIcon = document.getElementById('menuIcon');
+		const topIcon = document.getElementById('topIcon');
+		const closeIcon = document.getElementById('closeIcon');
+
+		function swapMenuClass () {
+			menu.classList.toggle('display')
+			menu.classList.toggle('hidden')
+
+			if (menu.classList.contains('display')) {
+				document.body.style.overflowY = 'hidden'
+				document.body.style.paddingRight = '17px'
+			}
+			else {
+				document.body.style.overflowY = 'auto'
+				document.body.style.paddingRight = '0'
+			}
+		};
+
+		function toTop () {
+			window.scroll({
+				top: 0,
+				behavior: 'smooth'
+			})
+		}
+
+		function toSection (sectionId) {
+			let section = document.getElementById(sectionId)
+			let height = section.getBoundingClientRect().top
+			window.scrollBy({
+				top: height,
+				behavior: 'smooth'
+			})
+			swapMenuClass()
+		}
+	</script>
 </body>
 </html>
