@@ -314,6 +314,7 @@ body > main section#curriculo div h2 {
 body > main section#curriculo div table {
 	margin: 2rem 0 0;
 	width: 100%;
+	border-spacing: 0;
 }
 
 body > main section#curriculo div table tr td {
