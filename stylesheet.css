@@ -352,7 +352,7 @@ body > main footer {
 		padding: 14px;
 		font-size: 32px;
 		line-height: 40px;
-		min-height: 100vh;
+		height: 100%;
 	}
 	body > aside img {
 		width: 32px;
@@ -363,6 +363,7 @@ body > main footer {
 	}
 	body > aside.display {
 		max-width: 80vw;
+		grid-template-rows: 0 32px 1fr 1fr 0;
 	}
 	body > main {
 		margin-left: 64px;
