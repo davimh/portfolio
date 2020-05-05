@@ -367,9 +367,7 @@ body > main footer {
 	}
 	body > main {
 		margin-left: 64px;
-	}
-	body > main section {
-		padding: 0 4rem;
+		width: 100%;
 	}
 	body > main section.proj div.images {
 		grid-template-columns: 1fr 1fr;
