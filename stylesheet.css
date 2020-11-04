@@ -50,6 +50,7 @@ h2 > p.number[data-bgcolor="10"] { background-color: #D9E021; }
 h2 > p.number[data-bgcolor="11"] { background-color: #8CC63F; }
 h2 > p.number[data-bgcolor="12"] { background-color: #39B54A; }
 h2 > p.number[data-bgcolor="13"] { background-color: #009245; }
+h2 > p.number[data-bgcolor="14"] { background-color: #015f2d; }
 
 h3 {
 	font-size: 0.75em;
@@ -193,6 +194,7 @@ body > aside.display div ul li[data-bgcolor="10"] span.number { background-color
 body > aside.display div ul li[data-bgcolor="11"] span.number { background-color: #8CC63F; }
 body > aside.display div ul li[data-bgcolor="12"] span.number { background-color: #39B54A; }
 body > aside.display div ul li[data-bgcolor="13"] span.number { background-color: #009245; }
+body > aside.display div ul li[data-bgcolor="13"] span.number { background-color: #015f2d; }
 
 body > aside.display div ul li,
 body > aside.display div p:last-child {
